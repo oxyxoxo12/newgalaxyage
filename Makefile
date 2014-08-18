@@ -15,7 +15,7 @@ ALLSPHINXOPTS   = -d .doctrees $(SPHINXOPTS) .
 html:
 	$(PYTHON) npc/update-npc.py
 	$(PYTHON) update-fits.py
-	$(PYTHON) wallet.py && cp srp.json $(BUILDDIR)/
+	# $(PYTHON) wallet.py && cp srp.json $(BUILDDIR)/ # FIXME its broken now
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/
 	touch $(BUILDDIR)/.nojekyll
 	echo "new-galaxy-age.tk" > $(BUILDDIR)/CNAME
